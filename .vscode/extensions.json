@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "irongeek.vscode-env",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "SonarSource.sonarlint-vscode",
+    "arcanis.vscode-zipfs"
+  ]
+}

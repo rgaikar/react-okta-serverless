@@ -1,0 +1,62 @@
+name: Deploy to AWS S3 Bucket
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment to deploy on"
+        required: true
+        type: choice
+        default: development
+        options:
+          - development
+          - staging
+          - production
+
+jobs:
+  build:
+    name: Deploy on  ${{ github.event.inputs.environment }} environment
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    permissions:
+      id-token: write
+      contents: read
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Dependencies
+        run: |
+          yarn install
+
+      - name: Build Application
+        run: |
+          yarn build
+        env:
+          CI: false
+          NODE_ENV: production
+          REACT_APP_ISSUER: ${{ secrets.REACT_APP_ISSUER }}
+          REACT_APP_CLIENT_ID: ${{ secrets.REACT_APP_CLIENT_ID }}
+          REACT_APP_API_ENDPOINT_URL: ${{ secrets.REACT_APP_API_ENDPOINT_URL }}
+          REACT_APP_ENVIRONEMNT: ${{ github.event.inputs.environment }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to S3 bucket
+        run: aws s3 sync ./build/ s3://${{ secrets.AWS_S3_BUCKET }} --delete --sse
+
+      - name: Invalidate Cloudfront Distribution Cache
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"

@@ -1,0 +1,44 @@
+name: Build Application
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: development
+
+    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+    permissions:
+      id-token: write
+      contents: read
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      - name: Build
+        run: |
+          yarn build
+        env:
+          CI: false
+          NODE_ENV: development
+          REACT_APP_ISSUER: ${{ secrets.REACT_APP_ISSUER }}
+          REACT_APP_CLIENT_ID: ${{ secrets.REACT_APP_CLIENT_ID }}
+          REACT_APP_API_ENDPOINT_URL: ${{ secrets.REACT_APP_API_ENDPOINT_URL }}
+          REACT_APP_ENVIRONEMNT: development
