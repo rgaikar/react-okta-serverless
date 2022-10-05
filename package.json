@@ -19,7 +19,7 @@
     "@mui/material": "^5.10.7",
     "@okta/okta-auth-js": "7.0.0",
     "@okta/okta-react": "^6.7.0",
-    "axios": "^0.27.2",
+    "axios": "^1.0.0",
     "lodash": "^4.17.21",
     "qs": "^6.11.0",
     "react": "^18.2.0",
