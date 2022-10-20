@@ -12,7 +12,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
 
 // Layout
-import ScenarioLayout from "./layouts";
+import Layout from "./layouts";
 
 // Components
 import { RequiredAuth } from "./components/Auth/SecureRoute";
@@ -50,7 +50,7 @@ const App = () => {
 
           {/* Welcome Page*/}
           <Route element={<RequiredAuth />}>
-            <Route element={<ScenarioLayout />}>
+            <Route element={<Layout />}>
               <Route path="/" element={<Welcome />}></Route>
             </Route>
           </Route>

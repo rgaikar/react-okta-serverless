@@ -27,8 +27,9 @@ const axiosConfig = async (
     },
     signal: signal,
     params,
-    paramsSerializer: (_params: any) =>
-      qs.stringify(_params, { arrayFormat: "repeat" }),
+    paramsSerializer: {
+      indexes: null,
+    },
   });
 };
 
