@@ -20,8 +20,6 @@ This project contains source code and supporting files for single page applicati
 - **auth**: Roles Access and Permissions.
 - **components**: React components code for the application.
 - **config**: Okta configuration for the application.
-- **helpers**: Predefined color for the products.
-- **mock**: Configuration for mock server and dummy data.
 - **pages**: Pages in the application
 - **services**: To make API calls.
 
