@@ -1,4 +1,4 @@
-# React Okta Python Serveless Starterkit
+# React Okta Serveless Starterkit
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
