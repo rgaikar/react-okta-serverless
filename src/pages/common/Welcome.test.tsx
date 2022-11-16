@@ -10,11 +10,3 @@ describe("Welcome test", () => {
     expect(element).toHaveTextContent("Welcome");
   });
 });
-
-describe("logo test", () => {
-  it("test takeda logo", () => {
-    render(<Welcome />);
-    const logo = screen.getByRole("img");
-    expect(logo).toHaveAttribute("alt", "Takeda logo");
-  });
-});
