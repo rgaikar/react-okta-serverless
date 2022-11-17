@@ -40,7 +40,7 @@ const options = {
   plugins: {
     title: {
       display: false,
-      text: "Capacity Utilization",
+      text: "Multi Type Chart",
     },
     filler: {
       propagate: true,
@@ -81,7 +81,7 @@ const options = {
       stacked: false,
       title: {
         display: true,
-        text: "Utilization %",
+        text: "%",
       },
       min: 0,
       suggestedMax: 100,
@@ -104,7 +104,7 @@ const options = {
       stacked: true,
       title: {
         display: true,
-        text: "Days",
+        text: "ABC",
       },
       grid: {
         display: false,
@@ -140,7 +140,7 @@ const chartData = {
   datasets: [
     {
       type: "line" as const,
-      label: "Manufacturing Utilization",
+      label: "A",
       yAxisID: "y",
       backgroundColor: "#E89287",
       borderColor: "#E89287",
@@ -165,11 +165,11 @@ const chartData = {
         "2031": 25,
         "2032": 32,
       },
-      key: "Manufacturing Utilisation",
+      key: "A",
     },
     {
       type: "bar" as const,
-      label: "Production",
+      label: "B",
       yAxisID: "y2",
       backgroundColor: "#5C80BC",
       pointStyle: "circle",
@@ -193,11 +193,11 @@ const chartData = {
         "2031": 101.47972602739725,
         "2032": 106.76945205479453,
       },
-      key: "Total Production",
+      key: "B",
     },
     {
       type: "bar" as const,
-      label: "Required Non-Production Time",
+      label: "C",
       yAxisID: "y2",
       backgroundColor: "#801F18",
       pointStyle: "circle",
@@ -221,11 +221,11 @@ const chartData = {
         "2031": 18,
         "2032": 0,
       },
-      key: "Total Required Non-Production Time",
+      key: "C",
     },
     {
       type: "bar" as const,
-      label: "Shutdown & Changeover",
+      label: "D",
       yAxisID: "y2",
       backgroundColor: "#E89287",
       pointStyle: "circle",
@@ -249,11 +249,11 @@ const chartData = {
         "2031": 0,
         "2032": 46,
       },
-      key: "Total Shutdown & Changeover",
+      key: "D",
     },
     {
       type: "bar" as const,
-      label: "Other",
+      label: "E",
       yAxisID: "y2",
       backgroundColor: "#A4A4AB",
       pointStyle: "circle",
@@ -277,11 +277,11 @@ const chartData = {
         "2031": 0,
         "2032": 0,
       },
-      key: "Total Other",
+      key: "E",
     },
     {
       type: "line" as const,
-      label: "Max Capacity",
+      label: "F",
       fill: true,
       yAxisID: "y2",
       borderWidth: 1,
@@ -291,7 +291,7 @@ const chartData = {
       pointRadius: 0,
       order: 7,
       gridOrder: 1,
-      uom: "Tons",
+      uom: "ABC",
       data: {
         "2022": 135,
         "2023": 135,
@@ -305,7 +305,7 @@ const chartData = {
         "2031": 481,
         "2032": 481,
       },
-      key: "Max Capacity",
+      key: "F",
     },
   ],
 };
