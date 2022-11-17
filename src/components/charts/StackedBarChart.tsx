@@ -77,8 +77,8 @@ const StackedBarChart = memo((props: StackedBarChartProps) => {
           <Link
             sx={{
               position: "absolute",
-              top: "15px",
-              right: "15px",
+              top: 0,
+              right: 0,
               color: "#707070",
               fontSize: 12,
               borderRadius: 21,
