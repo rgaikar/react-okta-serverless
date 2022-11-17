@@ -12890,13 +12890,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-chartjs-2@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "react-chartjs-2@npm:4.3.1"
+"react-chartjs-2@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "react-chartjs-2@npm:5.0.1"
   peerDependencies:
-    chart.js: ^3.5.0
+    chart.js: ^4.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 574d12cc43b9b4a0f1e04cc692982e16ef7083c03da2a8a9fc2180fe9bcadc793008f81d8f4eec5465925eff84c95d7c523cb74376858b363ae75a83bb3c2a5d
+  checksum: b6f20cf68eb8961891af10250e737b50b940d74b7a3a07aae51f356960a865f822ee61856131c3965c7c547f06013ad963a679ed14d59d12e7c7d64c1db52f6c
   languageName: node
   linkType: hard
 
@@ -13014,7 +13014,7 @@ __metadata:
     lodash: ^4.17.21
     prettier: ^2.7.1
     react: ^18.2.0
-    react-chartjs-2: ^4.3.1
+    react-chartjs-2: ^5.0.0
     react-dom: ^18.2.0
     react-router-dom: ^6.4.3
     react-scripts: ^5.0.1
