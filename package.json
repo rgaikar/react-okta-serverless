@@ -17,7 +17,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.14",
-    "@mui/material": "^5.10.14",
+    "@mui/material": "^5.10.16",
     "@okta/okta-auth-js": "7.0.1",
     "@okta/okta-react": "^6.7.0",
     "axios": "^1.1.3",
