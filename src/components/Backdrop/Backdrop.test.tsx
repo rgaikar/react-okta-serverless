@@ -1,6 +1,5 @@
+import { describe, expect, afterEach, vi } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
-// Importing the jest testing library
-import "@testing-library/jest-dom";
 import { Backdrop, CircularProgress } from "@mui/material";
 
 // afterEach function runs after each test suite is executed
@@ -9,10 +8,9 @@ afterEach(() => {
 });
 
 describe("Backdrop component", () => {
-  const setToggle = jest.fn();
+  const setToggle = vi.fn();
   render(
     <Backdrop open={true} onClick={setToggle}>
-      {" "}
       <CircularProgress color="inherit" data-testid="circular-ui" />
     </Backdrop>
   );

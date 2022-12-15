@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import { MemoryRouter } from "react-router-dom";
-import "@testing-library/jest-dom/extend-expect";
+
 import AccessDenied from "./AccessDenied";
 
 describe("Access Denied test", () => {

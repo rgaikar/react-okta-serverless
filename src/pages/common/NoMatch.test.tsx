@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
-import "@testing-library/jest-dom/extend-expect";
-import NoMatch from "./NoMatch";
 import { BrowserRouter } from "react-router-dom";
+
+import NoMatch from "./NoMatch";
 
 describe("No match  test", () => {
   it("No match ", () => {

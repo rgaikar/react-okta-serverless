@@ -2,7 +2,6 @@ import { render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import { MemoryRouter } from "react-router-dom";
 
-import "@testing-library/jest-dom/extend-expect";
 import ErrorPage from "./ErrorPage";
 
 describe("Error page  test", () => {

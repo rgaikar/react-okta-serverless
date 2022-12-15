@@ -3,7 +3,7 @@ export default function NoDataArea() {
   return (
     <>
       {
-        <div 
+        <div
           data-testid="nodata-display-ui"
           style={{
             display: "flex",
