@@ -3284,9 +3284,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@okta/okta-auth-js@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@okta/okta-auth-js@npm:7.1.1"
+"@okta/okta-auth-js@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@okta/okta-auth-js@npm:7.2.0"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@peculiar/webcrypto": ^1.4.0
@@ -3304,7 +3304,7 @@ __metadata:
     tiny-emitter: 1.1.0
     webcrypto-shim: ^0.1.5
     xhr2: 0.1.3
-  checksum: 8d6c29264cc1b43993dee0add77962c022efde01ac4f13c4d0c8576f022fe5c0c30aa748170f5bd327fc0942f97e42e62f718a87b719ddcea0de81abafb1e459
+  checksum: 31865e56e87e7e0ca8096e0cdce5abfdfd39ee34966258e0e90cdcceb41afff63a8928afb43406b8e10ce01ed6e6bbc452ac4766f25af7e7d2572ef09fb4c039
   languageName: node
   linkType: hard
 
@@ -13138,7 +13138,7 @@ __metadata:
     "@emotion/styled": ^11.10.5
     "@mui/icons-material": ^5.11.0
     "@mui/material": ^5.11.0
-    "@okta/okta-auth-js": 7.1.1
+    "@okta/okta-auth-js": 7.2.0
     "@okta/okta-react": ^6.7.0
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0
